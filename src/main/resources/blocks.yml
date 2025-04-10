@@ -1,0 +1,42 @@
+# 元数据区（非必需）
+_meta:
+  version: 1.2
+  author: "YourName"
+  default_locale: "zh_cn"
+
+# 方块定义区
+blocks:
+  # 示例方块 - 坚硬花岗岩
+  granite_rock:
+    # 元数据描述
+    _meta:
+      name:
+        zh_cn: "花岗岩石"
+        en_us: "Granite Rock"
+      description:
+        zh_cn: "一种极其坚硬的岩石方块"
+        en_us: "An extremely hard rock block"
+      tips:
+        - "需要铁镐及以上挖掘"
+        - "可用于建造防御工事"
+
+    # 物理属性
+    properties:
+      destroy_time: 8.0      # 破坏时间（浮点数）
+      explosion_resistance: 1200.0
+      sound_type: "STONE"    # 声音类型
+      map_color: "DEEPSLATE" # 地图颜色
+      light_emission: 0      # 发光等级
+
+    # 物品属性
+    item_properties:
+      rarity: "UNCOMMON"     # 稀有度
+      fire_resistant: true
+      max_stack_size: 64
+      creative_tab: "building_blocks"
+
+# 物品定义区（独立物品）
+items:
+  magic_crystal:
+    _meta: { ... }
+    properties: { ... }
